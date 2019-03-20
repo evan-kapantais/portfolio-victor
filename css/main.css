@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+  padding:4em;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  color: rgb(202, 202, 202);
+  transition: all .3s ease; 
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.hero {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.527) url('../img/hero-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: center;
+  background-blend-mode: color-dodge;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-text {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  transform: translate(-45%, -20%);
+  pointer-events: none;
+}
+
+.hero-text h1 {
+  font-size: 5em;
+  font-weight: 300;
+  transition: all .5s ease;
+}
+
+.hero-text p {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.hero-social {
+  position: absolute;
+  top: 45%;
+  right: -7em;
+}
+
+.hero-social-row:nth-child(1) {
+  background: #5373A8;
+}
+
+.hero-social-row:nth-child(2) {
+  background: #49BAEA;
+}
+
+.hero-social-row:nth-child(3) {
+  background: #3588B0;
+}
+
+.hero-social-row:nth-child(4) {
+  background: #444444;
+}
+
+.hero-social-row {
+  display: flex;
+  align-items: center;
+  margin-left: 7em;
+  transition: all .5s ease;
+  padding: .3em 0;
+  font-weight: 600;
+}
+
+.hero-social-row:hover {
+  margin-left: 0;
+}
+
+.hero-social-row p {
+  width: 7em;
+}
+
+
+#photo-credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color:black;
+  color:white;
+  text-decoration:none;
+  padding:4px 6px;
+  font-family:-apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
+  font-size:12px;
+  font-weight:bold;
+  line-height:1.2;
+  display:inline-block;
+  border-radius:3px;
+}
