@@ -37,7 +37,7 @@ body {
   background-blend-mode: color-dodge;
   position: relative;
   color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .hero-text {
@@ -98,6 +98,21 @@ body {
   width: 7em;
 }
 
+#about {
+  padding: 5em 0;
+}
+
+#about img {
+  width: auto;
+}
+
+#about .container {
+  display: flex;
+}
+
+.about-text {
+  padding: 0 8em;
+}
 
 #photo-credit {
   position: absolute;
