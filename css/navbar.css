@@ -1,0 +1,23 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+  padding:4em;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  color: rgb(202, 202, 202);
+  transition: all .3s ease; 
+}
+
+.nav-link:hover {
+  color: #fff;
+}
