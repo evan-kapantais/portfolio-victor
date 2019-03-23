@@ -1,4 +1,13 @@
+
+.grid {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  grid-gap : 2em;
+  padding: 5em;
+}
+
 .card {
+  width: 15em;
   overflow: hidden;
 }
 

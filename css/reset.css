@@ -1,5 +1,6 @@
 html, body {
   box-sizing: border-box;
+  text-align: center;
 }
 
 *, *::before, *::after {
