@@ -2,6 +2,7 @@
   padding: 10em 10em;
   background: rgb(255, 255, 255);
   text-align: left;
+  display: none;
 }
 
 #about .container {
