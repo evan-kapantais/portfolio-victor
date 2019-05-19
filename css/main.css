@@ -83,11 +83,7 @@ p:last-child {
 /* Hero */
 
 .hero {
-  height: 500px;
-  background: var(--primary-grey) ;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: var(--primary-grey);
   position: relative;
 }
 
@@ -95,15 +91,14 @@ p:last-child {
   max-width: 800px;
   min-height: 300px;
   background: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 2em;
-  top: 200px;
-  left: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  border: 5px solid var(--primary-grey);
   box-shadow: 25px 25px 0 0 var(--primary-yellow);
+  position: relative;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .hero-container-right {
