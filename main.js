@@ -8,53 +8,53 @@ for (gameCard of gameCards) {
 }
 
 function initModal(e) {
-  const name = e.target.getAttribute("data-name");
-  console.log(name);
-  
-  if (name == "cd") {
-    new Modal("cd", ["ios", "android"], "Champions Destiny", "lorem ipsum whatever", "https://www.youtube.com/watch?v=dR2uQaNlUs8");
+  const gameName = e.target.getAttribute("data-name");
+  setModalContent(gameName);
+  showModal();
+  closeBtn.onclick = hideModal;
+}
+
+function showModal() {
+  modal.style.visibility = "visible";
+  closeBtn.style.width = "20px";
+  document.querySelector(".container").classList.add("body-dark");
+
+  for (gameCard of gameCards) {
+    gameCard.removeEventListener("click", initModal);
   }
 }
 
-class Modal {
-  constructor(icon, platforms, title, description, videoSrc){
-    this.icon = "img/" + icon + "-icon.jpg"; // ml-icon.jpg
-    this.platforms = [...platforms];  // ["ios.jpg", "android.jpg"]
-    this.title = title; // "Monster Lenegds"
-    this.description = description; // "lorem10"
-    this.videoSrc = videoSrc; // "https://www.monsterlegendsgame.com/videos/ML-Spot.mp4"
-    this.close();
-    this.init();
+function hideModal() {
+  modal.style.visibility = "hidden";
+  this.style.width = "0px";
+
+  for (gameCard of gameCards) {
+    gameCard.addEventListener("click", initModal);
   }
+}
 
-  close() {
-    modal.style.visibility = "hidden";
-  }
+function setModalContent(gameName) {
 
-  init() {
-    modal.style.visibility = "visible";
+  const modalTitle = document.querySelector(".modal-heading");
+  // const modalIcon = document.querySelector(".modal-icon");
+  const modalDescription = document.querySelector(".modal-description");
+  const modalVideo = document.querySelector(".modal-video");
 
-    const title = document.querySelector(".modal-heading");
-    title.innerText = this.title;
-
-    const icon = document.querySelector(".modal-icon");
-    icon.setAttribute("src", this.icon);
-
-    const video = document.querySelector("video");
-    video.setAttribute("src", this.videoSrc);
-    console.log(video.src);
+  if (gameName == "cd") {
+    modalTitle.innerText = "Champions Destiny";
+    // modalIcon.setAttribute("src", "img/cd-icon.jpg");
+    modalDescription.innerText = "This is Champions Destiny";
+    // modalVideo.setAttribute("src", "https://www.youtube.com/watch?v=dR2uQaNlUs8");
   }
 }
 
 function shrinkNavbar() {
 
-  let navbar = document.getElementsByClassName("navbar")[0];
+  let navbar = document.querySelector(".navbar");
 
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    navbar.style.padding = "2em 4em";
-    navbar.style.background = "rgba(0, 0, 0, .9)";
+    navbar.classList.add("shown");
   } else {
-    navbar.style.padding = "4em";
-    navbar.style.background = "initial";
+    navbar.classList.remove("shown");
   }
 }

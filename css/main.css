@@ -1,14 +1,147 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+/* GLOBALS */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 @import url('reset.css');
 @import url('hero.css');
 @import url('about.css');
 @import url('games.css');
-@import url('navbar.css');
+
+:root {
+  --primary-yellow: ;
+  --primary-grey: ;
+}
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
 }
-/* 
-.hero, #about, .navbar {
-  display: none;
-} */
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em 2em;
+  transition: all .3s ease-out;
+  background: #333;
+}
+
+.navbar.shown {
+  top: 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-link {
+  color: rgb(202, 202, 202);
+  transition: all .3s ease;
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all .3s ease;
+}
+
+.nav-link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+/* HERO SOCIAL WIDGET */
+
+.hero-social {
+  position: absolute;
+  top: 45%;
+  right: -7em;
+}
+
+.hero-social-row:nth-child(1) {
+  background: #5373A8;
+}
+
+.hero-social-row:nth-child(2) {
+  background: #49BAEA;
+}
+
+.hero-social-row:nth-child(3) {
+  background: #3588B0;
+}
+
+.hero-social-row:nth-child(4) {
+  background: #444444;
+}
+
+.hero-social-row {
+  display: flex;
+  align-items: center;
+  margin-left: 7em;
+  transition: all .5s ease;
+  padding: .3em 0;
+  font-weight: 600;
+}
+
+.hero-social-row:hover {
+  margin-left: 0;
+}
+
+.hero-social-row p {
+  width: 7em;
+}
+
+#photo-credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color:black;
+  color:white;
+  text-decoration:none;
+  padding:4px 6px;
+  font-family:-apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
+  font-size:12px;
+  font-weight:bold;
+  line-height:1.2;
+  display:inline-block;
+  border-radius:3px;
+}
+
+/* Hero */
+
+.hero-container {
+  display: flex;
+  width: 50%;
+}
+
+.hero-container-right {
+  padding: 2em;
+}
+
+.img-round {
+  overflow: hidden;
+  border: 5px solid rgb(236, 217, 132);
+  border-radius: 50%;
+}
