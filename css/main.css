@@ -16,7 +16,7 @@ body {
   color: var(--primary-grey);
 }
 
-section {
+.section {
   padding: 40px;
 }
 
@@ -143,4 +143,43 @@ p:last-child {
   left: -125px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.btn-primary {
+  position: relative;
+  width: 8.5em;
+  height: 3.5em;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 2px;
+  background: var(--primary-grey);
+  color: #fff;
+  transition: all .2s;
+}
+
+.btn-primary:hover {
+  box-shadow: 7px 7px 0 0;
+}
+
+.btn-primary:active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+.btn-yellow {
+  background: var(--primary-yellow);
+  box-shadow: 5px 5px 0 0 var(--primary-grey);
+  color: var(--primary-grey);
+}
+
+.btn-grey {
+  background: var(--primary-grey);
+  box-shadow: 5px 5px 0 0 var(--primary-yellow);
+  color: var(--primary-yellow);
 }
