@@ -38,7 +38,7 @@ p:last-child {
   width: 100%;
   z-index: 999;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 1em 2em;
   transition: all .3s ease-out;
   background: var(--primary-grey);
@@ -50,11 +50,11 @@ p:last-child {
 
 .navbar ul {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .nav-item {
-  margin: 0 10px;
+  margin: 0 20px;
   background-image: url("img/brush-stroke-banner-6.png");
 }
 
@@ -62,15 +62,17 @@ p:last-child {
   color: rgb(202, 202, 202);
   transition: all .3s ease;
   position: relative;
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 2px;
 }
 
 .nav-link::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 5px;
   background-color: var(--primary-yellow);
   visibility: hidden;
   transform: scaleX(0);
@@ -153,6 +155,7 @@ p:last-child {
   border-radius: 5px;
   font-weight: 600;
   font-family: "Permanent Marker", cursive;
+  cursor: pointer;
   letter-spacing: 2px;
   background: var(--primary-grey);
   color: #fff;
