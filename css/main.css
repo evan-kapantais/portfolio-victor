@@ -82,7 +82,7 @@ p:last-child {
 
 /* Hero */
 
-.hero {
+#hero {
   background: var(--primary-grey);
   position: relative;
 }
