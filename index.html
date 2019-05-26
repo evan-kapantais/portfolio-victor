@@ -8,7 +8,7 @@
   <title>Victor Sola</title>
 </head>
 <body>
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <ul>
       <li class="nav-item"><a href="#hero" class="nav-link">HOME</a></li>
       <li class="nav-item"><a href="#games" class="nav-link">GAMES</a></li>
@@ -47,23 +47,30 @@
         <div class="game"></div>
       </div>
     </section>
+
     <section class="media" id="media">
 
-    </section>
+    </section> -->
+
     <section class="contact" id="contact">
-      <div class="contact-img"></div>
-      <div class="container">
-        <div class="contact-text">
+      <div class="contact-img-wrapper"></div>
+      <div class="contact-form-wrapper">
+        <div class="contact-form-container">
           <form class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" name="name" placeholder="What should I call you?">
-            <label for="email">Email*</label>
-            <input type="email" name="email" placeholder="How do I reach you?" required>
-            <label for="subject">Subject*</label>
-            <input type="text" name="subject" placeholder="Make it fancy." required>
-            <label for="message">Message*</label>
-            <textarea name="message" id="message" cols="30" rows="7" placeholder="Your message here." required></textarea>
+            <h1>Contact Me</h1>
+            <label for="name"></label>
+            <input type="text" name="name" placeholder="Name*">
+            <label for="email"></label>
+            <input type="email" name="email" placeholder="Email*" required>
+            <label for="subject"></label>
+            <input type="text" name="subject" placeholder="Subject*" required>
+            <label for="message"></label>
+            <textarea name="message" id="message" cols="30" rows="7" placeholder="Message*" required></textarea>
+            <button type="submit" class="btn">SUBMIT</button>
           </form>
+        </div>
+        <div class="contact-icons">
+
         </div>
       </div>
     </section>

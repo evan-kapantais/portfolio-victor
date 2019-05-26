@@ -101,38 +101,47 @@ p:last-child {
   color: #fff;
 }
 
+.hero {
+  padding: 0;
+}
+
 .hero-main-img {
   position: absolute;
   top: 0;
   right: 0;
   height: 100vh;
-  width: 70vw;
+  width: 80vw;
   background: var(--primary-grey) url("../img/backgrounds/joseph-pearson-433773-unsplash.jpg") no-repeat center;
   background-size: cover;
-  border: 1px solid;
 }
 
 .hero-container {
   display: flex;
-  position: absolute;
+  position: relative;
   width: 50vw;
+  height: 450px;
   top: 30%;
-  left: 310px;
+  left: 10vw;
   box-shadow: 0 0 10px 0 rgb(122, 122, 122);
 }
 
 .hero-container-img {
-  width: 30%;
+  width: 40%;
   background: var(--primary-grey) url("../img/portraits/portrait-06.jpg") no-repeat center;
   background-size: cover;
 }
 
 .hero-container-text {
   width: 70%;
-  padding: 4em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 0 4em;
   text-align: left;
   background: #fff;
 }
+
+/* ======================== Games ======================*/
 
 #games {
   position: relative;
@@ -217,38 +226,38 @@ p:last-child {
   height: 300px;
   border-radius: 10px;
   filter: none;
-  margin-top: 0;
 }
 
 .game > img {
   height: 100%;
 }
 
-/* Contact */
+/* =============================== Contact ==================================*/
 
 #contact {
   padding: 0;
+  display: flex;
 }
 
-.contact > .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 5px 0 rgb(202, 202, 202);
-}
-
-.contact-img {
-  position: absolute;
+.contact-img-wrapper {
   height: 100vh;
   width: 50vw;
   background: var(--primary-grey) url("../img/backgrounds/joseph-pearson-433773-unsplash.jpg") no-repeat center;
   background-size: cover;
 }
 
-.contact-text {
-  width: 60%;
-  padding: 20px 10%;
+.contact-form-wrapper {
+  width: 50%;
+  position: relative;
+}
+
+.contact-form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  min-width: 300px;
 }
 
 .contact-form {
@@ -257,13 +266,14 @@ p:last-child {
   text-align: left;
 }
 
-label {
-  margin-bottom: .2em;
+.contact-form > h1 {
+  margin-bottom: 1.5em;
+  font-size: 2.5em;
 }
 
 input,
 textarea {
-  margin-bottom: .8em;
+  margin-bottom: 1.5em;
   border-radius: 5px;
   border: 1px solid rgb(175, 175, 175);
   padding: .5em;
@@ -276,4 +286,26 @@ input:focus {
 
 input:last-child {
   margin-bottom: 0;
+}
+
+.btn {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: rgb(99, 187, 241);
+  max-width: 100px;
+  padding: .8em;
+  border: none;
+  border-radius: 3px;
+  transition: all .5s;
+  margin: 0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgb(28, 149, 224);
+}
+
+.btn:active {
+  background: rgb(0, 89, 145);
 }
