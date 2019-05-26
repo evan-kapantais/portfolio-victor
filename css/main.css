@@ -115,20 +115,23 @@ p:last-child {
 .hero-container {
   display: flex;
   position: absolute;
-  width: 800px;
+  width: 50vw;
   top: 30%;
   left: 310px;
   box-shadow: 0 0 10px 0 rgb(122, 122, 122);
 }
 
+.hero-container-img {
+  width: 30%;
+  background: var(--primary-grey) url("../img/portraits/portrait-06.jpg") no-repeat center;
+  background-size: cover;
+}
+
 .hero-container-text {
+  width: 70%;
   padding: 4em;
   text-align: left;
   background: #fff;
-}
-
-.hero-container-img > img {
-  width: 800px;
 }
 
 #games {
@@ -223,9 +226,11 @@ p:last-child {
 
 /* Contact */
 
+#contact {
+  padding: 0;
+}
+
 .contact > .container {
-  display: flex;
-  width: 50vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -234,8 +239,10 @@ p:last-child {
 }
 
 .contact-img {
-  width: 40%;
-  background: #333 url("../img/backgrounds/joseph-pearson-433773-unsplash.jpg") no-repeat center;
+  position: absolute;
+  height: 100vh;
+  width: 50vw;
+  background: var(--primary-grey) url("../img/backgrounds/joseph-pearson-433773-unsplash.jpg") no-repeat center;
   background-size: cover;
 }
 
