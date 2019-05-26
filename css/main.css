@@ -101,6 +101,8 @@ p:last-child {
   color: #fff;
 }
 
+/* ===================== Hero ======================= */
+
 .hero {
   padding: 0;
 }
@@ -232,7 +234,27 @@ p:last-child {
   height: 100%;
 }
 
-/* =============================== Contact ==================================*/
+/* =============================== Media =================================== */
+
+.media-container {
+  border: 1px solid;
+  position: relative;
+  top: 300px;
+  width: 640px;
+}
+
+.caption-container {
+  background: var(--primary-grey);
+  color: white;
+  padding: 1.5em 0;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+/* =============================== Contact ================================== */
 
 #contact {
   padding: 0;
