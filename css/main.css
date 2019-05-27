@@ -26,14 +26,34 @@ section {
   position: relative;
 }
 
-.parallax {
-  height: 50vh;
-}
-
 .parallax-1 {
   background: url("../img/backgrounds/andreas-dress-1549790-unsplash.jpg") no-repeat center;
+}
+
+.parallax-2 {
+  background: url("../img/backgrounds/namroud-gorguis-253765-unsplash.jpg") no-repeat center;
+}
+
+.parallax {
+  height: 50vh;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.main-heading {
+  color: #fff;
+  text-align: left;
+  font-size: 8em;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  border-top: 10px solid #fff;
+  letter-spacing: 5px;
+}
+
+.main-heading-alt {
+  color: #fff;
+  
 }
 
 p {
@@ -264,7 +284,7 @@ iframe {
 .contact-img-wrapper {
   height: 100vh;
   width: 50vw;
-  background: var(--primary-grey) url("../img/backgrounds/joseph-pearson-433773-unsplash.jpg") no-repeat center;
+  background: var(--primary-grey) url("../img/backgrounds/joseph-pearson-433773-unsplash.jpg") no-repeat 50% 70%;
   background-size: cover;
 }
 
