@@ -3,13 +3,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 @import url('reset.css');
-/* @import url("social-widget.css"); */
 
 :root {
   --primary-yellow: rgb(253, 239, 158);
   --primary-grey: #1E2827;
   --radius: 5px;
-  --shadow: 
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,14 +26,34 @@ section {
   position: relative;
 }
 
-.parallax {
-  height: 50vh;
+.parallax-1 {
+  background: url("../img/backgrounds/andreas-dress-1549790-unsplash.jpg") no-repeat center;
 }
 
-.parallax-1 {
-  background: url("../img/backgrounds/tina-dawson-1287359-unsplash.jpg") no-repeat center;
+.parallax-2 {
+  background: url("../img/backgrounds/namroud-gorguis-253765-unsplash.jpg") no-repeat center;
+}
+
+.parallax {
+  height: 50vh;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.main-heading {
+  color: #fff;
+  text-align: left;
+  font-size: 8em;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  border-top: 10px solid #fff;
+  letter-spacing: 5px;
+}
+
+.main-heading-alt {
+  color: #fff;
+  
 }
 
 p {
@@ -68,14 +90,12 @@ p:last-child {
 
 .nav-item {
   margin: 0 20px;
-  background-image: url("img/brush-stroke-banner-6.png");
 }
 
 .nav-link {
   color: rgb(202, 202, 202);
   transition: all .3s ease;
   position: relative;
-  font-family: "Permanent Marker", cursive;
   letter-spacing: 2px;
 }
 
@@ -85,8 +105,8 @@ p:last-child {
   bottom: -5px;
   left: 0;
   width: 100%;
-  height: 5px;
-  background-color: var(--primary-yellow);
+  height: 2px;
+  background-color: #fff;
   visibility: hidden;
   transform: scaleX(0);
   transition: all .3s ease;
@@ -98,43 +118,52 @@ p:last-child {
 }
 
 .nav-link:hover {
-  color: var(--primary-yellow);
+  color: #fff;
 }
 
+/* ===================== Hero ======================= */
+
 .hero {
-  height: 100vh;
+  padding: 0;
 }
 
 .hero-main-img {
-  height: 100vh;
   position: absolute;
   top: 0;
-  left: 550px;
-}
-
-.hero-main-img > img {
-  height: 100%;
-  width: 1000px;
+  right: 0;
+  height: 100vh;
+  width: 80vw;
+  background: var(--primary-grey) url("../img/backgrounds/joseph-pearson-433773-unsplash.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .hero-container {
   display: flex;
-  position: absolute;
-  width: 800px;
+  position: relative;
+  width: 50vw;
+  height: 450px;
   top: 30%;
-  left: 270px;
+  left: 10vw;
   box-shadow: 0 0 10px 0 rgb(122, 122, 122);
 }
 
+.hero-container-img {
+  width: 40%;
+  background: var(--primary-grey) url("../img/portraits/portrait-06.jpg") no-repeat center;
+  background-size: cover;
+}
+
 .hero-container-text {
-  padding: 20px;
+  width: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 0 4em;
   text-align: left;
   background: #fff;
 }
 
-.hero-container-img > img {
-  width: 800px;
-}
+/* ======================== Games ======================*/
 
 #games {
   position: relative;
@@ -157,23 +186,8 @@ p:last-child {
   margin: 0 5px;
   border-radius: 75px;
   transition: all .5s;
-  filter: grayscale(.7);
+  filter: grayscale(.5);
   overflow: hidden;
-}
-
-.overlay {
-  background: rgb(255, 255, 255);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 1s;
 }
 
 .game:nth-child(1) {
@@ -234,38 +248,94 @@ p:last-child {
   height: 300px;
   border-radius: 10px;
   filter: none;
-  margin-top: 0;
-}
-
-.game:hover > .overlay {
-  opacity: .7;
 }
 
 .game > img {
   height: 100%;
 }
 
-/* Contact */
+/* =============================== Media =================================== */
 
-.contact > .container {
-  display: flex;
-  width: 60%;
+#media {
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  filter: grayscale(1);
+}
+
+.media-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 5px 0 rgb(202, 202, 202);
+  display: flex;
+  align-items: center;
 }
 
-.contact-img {
-  width: 40%;
-  background: #333 url("../img/backgrounds/joseph-pearson-433773-unsplash.jpg") no-repeat center;
+.slide {
+  display: none;
+}
+
+.main-video {
+  border: 7px solid white;
+  border-radius: 5px;
+}
+
+.slide-btn {
+  font-size: 3em;
+  color: #fff;
+  background: transparent;
+  border: none;
+  padding: .2em;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+.slide-btn:hover {
+  background: rgba(0, 0, 0, 0.822);
+}
+
+.next {
+  margin-left: .5em;
+}
+
+.prev {
+  margin-right: .5em;
+}
+
+/* =============================== Contact ================================== */
+
+#contact {
+  padding: 0;
+  display: flex;
+}
+
+.contact-img-wrapper {
+  height: 100vh;
+  width: 50vw;
+  background: var(--primary-grey) url("../img/backgrounds/joseph-pearson-433773-unsplash.jpg") no-repeat 50% 70%;
   background-size: cover;
 }
 
-.contact-text {
-  width: 60%;
-  padding: 20px 10%;
+.contact-form-wrapper {
+  width: 50%;
+  position: relative;
+}
+
+.contact-form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  min-width: 300px;
 }
 
 .contact-form {
@@ -274,13 +344,14 @@ p:last-child {
   text-align: left;
 }
 
-label {
-  margin-bottom: .2em;
+.contact-form > h1 {
+  margin-bottom: 1.5em;
+  font-size: 2.5em;
 }
 
 input,
 textarea {
-  margin-bottom: .8em;
+  margin-bottom: 1.5em;
   border-radius: 5px;
   border: 1px solid rgb(175, 175, 175);
   padding: .5em;
@@ -293,4 +364,26 @@ input:focus {
 
 input:last-child {
   margin-bottom: 0;
+}
+
+.btn {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: rgb(99, 187, 241);
+  max-width: 100px;
+  padding: .8em;
+  border: none;
+  border-radius: 3px;
+  transition: all .5s;
+  margin: 0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgb(28, 149, 224);
+}
+
+.btn:active {
+  background: rgb(0, 89, 145);
 }
